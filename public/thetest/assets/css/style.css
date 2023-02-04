@@ -1,0 +1,219 @@
+
+:root{
+    --txt-light:white;
+    --bg-black:#000000;
+    --bg-gray:#232323;
+    --bg-gold:#9b7714;
+    --nav-active-bg:#f19203;
+    --bg-DarkGold:#9b6514;
+    --bg-hover-odd-gold: #794c09;
+    --bg-hover-even-gold: #583a0c;
+    --bg-hover-dark:#646464;
+    --bg-hover-light:#494848;
+    --bg-active-dark:#1f1502;
+    --bg-active-submenu:#402b04;
+    --gold: #f0ff00;
+    --orange: #ffbb33;
+    --base_bg:#000000;
+    --base_color:#ffffff;
+    --ligter_bg:#1b1b1b;
+    --base_golden_bg:#f19203;
+    --light_golden_bg: #f19203;
+    --lighter_golden_bg: #f1bc6b;
+    --lighter_golden_hover: #a07a41;
+    --golden_color:#f1b103;
+}
+[lang=fa]{
+    direction: rtl!important;
+}
+.rtl{
+    direction: rtl !important;
+}
+.ltr{
+    direction: ltr !important;
+}
+.bg-base{
+    background: var(--bg-gold)!important;
+    color: var(--txt-light)!important;
+}
+body{
+    /* font-family: 'iransance'; */
+    font-size: 1rem;
+}
+main{
+    margin-top: 6rem;
+}
+#sidebarMenu{
+    width: 100%;
+    padding-top: 4rem;
+}
+aside .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background: var(--nav-active-bg) !important;
+    color: var(--txt-light) !important;
+    border: none;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+/* ---------------------------------
+|
+|   side nave
+|
+-----------------------------------*/
+
+
+#sidebarMenu>div>ul>li{
+    position: relative;
+}
+
+#sidebarMenu>div>ul>li:hover::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 15px;
+    border-color: transparent transparent transparent var(--golden_color);
+    border-style: solid;
+
+}
+
+#sidebarMenu>div>ul>li>ul{
+    display: none;
+    position: absolute;
+    width: 250px;
+    top: 0;
+    right: 13.9rem;
+    z-index: 999;
+    background: black;
+    padding: 0;
+}
+
+#sidebarMenu>div>ul>li:nth-child(n+9)>ul{
+    display: none;
+    position: absolute;
+    width: 250px;
+    top:auto;
+    bottom: 0;
+    right: 13.9rem;
+    transform: translate(-0%,50%);
+    z-index: 999;
+    background: black;
+    padding: 0;
+}
+
+#sidebarMenu>div>ul>li>ul>li{
+    position: relative;
+    padding: 0.7rem;
+}
+
+#sidebarMenu>div>ul>li>ul>li:nth-child(odd){
+    background: var(--lighter_golden_bg);
+}
+
+#sidebarMenu>div>ul>li>ul>li:nth-child(odd):hover{
+    background: var(--lighter_golden_hover);
+}
+
+#sidebarMenu>div>ul>li>ul>li:nth-child(even){
+    background: var(--light_golden_bg);
+}
+
+#sidebarMenu>div>ul>li>ul>li:nth-child(even):hover{
+    background: var(--lighter_golden_hover);
+}
+
+#sidebarMenu>div>ul>li>ul>li>a{
+    color: var(--base_color);
+}
+
+#sidebarMenu>div>ul>li>ul>li>a{
+    text-decoration: none;
+}
+
+#sidebarMenu ul.nav {
+    display: block !important;
+}
+
+#sidebarMenu ul li{
+    display: block !important;
+}
+
+#sidebarMenu>div>ul>li:hover>ul{
+    display: block !important;
+}
+
+
+
+aside .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background: var(--base_golden_bg) !important;
+    color: var(--base_color) !important;
+    border: none;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+aside .nav-link:focus,aside .nav-link:hover{
+    color: var(--base_color) !important;
+}
+
+
+#sidebarMenu>div>ul>li:hover>ul{
+    position: absolute;
+    display: block;
+
+}
+
+aside.bg-black a {
+    color: var(--golden_color);
+}
+
+
+
+
+
+/* ---------------------------------
+|
+|   summer note
+|
+-----------------------------------*/
+/* summer note */
+.note-editor.note-frame.panel.panel-default{
+    direction: ltr!important;
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.btn-default {
+    color: #333;
+    background-color: var(--gold);
+    border-color: #ccc;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+}
+
+.open>.dropdown-menu {
+    display: block;
+}
